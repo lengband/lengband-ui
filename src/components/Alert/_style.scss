@@ -1,0 +1,29 @@
+.alert {
+  position: relative;
+  font-weight: $font-weight-base;
+  color: $body-color;
+  background-image: none;
+  box-shadow: $alert-box-shadow;
+  @include alert-size($alert-padding-y,  $alert-padding-x,  $font-size-base,  $border-radius);
+  .alert_close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.25rem;
+    font-style: normal;
+    cursor: pointer;
+  }
+}
+
+.alert-lg {
+  @include alert-size($alert-padding-y-lg, $alert-padding-x-lg, $alert-font-size-lg, $border-radius-lg);
+}
+.alert-sm {
+  @include alert-size($alert-padding-y-sm, $alert-padding-x-sm, $alert-font-size-sm, $border-radius-sm);
+}
+
+.alert-primary {
+  @include alert-style($primary, $primary, $white)
+}
+.alert-danger {
+  @include alert-style($danger, $danger, $white)
+}
