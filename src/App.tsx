@@ -7,6 +7,11 @@ import SubMenu from './components/Menu/subMenu'
 import Tab from './components/Tab/tab'
 import TabItem from './components/Tab/tabItem'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
+
 function App() {
   return (
     <div className="App">
@@ -42,6 +47,10 @@ function App() {
         <TabItem>菜单2</TabItem>
         <TabItem>菜单3</TabItem>
       </Tab>
+
+      <hr/>
+
+      <FontAwesomeIcon icon='arrow-down' />
     </div>
   );
 }

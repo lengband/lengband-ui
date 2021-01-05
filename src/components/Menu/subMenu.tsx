@@ -1,10 +1,9 @@
-import React,{ useContext, useState, useEffect,FunctionComponentElement } from 'react'
+import React,{ useContext, useState, FunctionComponentElement } from 'react'
 import classNames from 'classnames'
 import { MenuContext } from './menu'
 import { MenuItemProps } from './menuItem'
-// import Icon from '../Icon/icon'
-// import Transition from '../Transition/transition'
-
+import Icon from '../Icon/icon'
+import Transition from '../Transition/transition'
 export interface SubMenuProps {
   index?: string;
   title: string;
@@ -31,7 +30,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className}) =
     e.preventDefault()
     timer = setTimeout(() => {
       setOpen(toggle)
-    }, 100)
+    }, 300)
   }
   const clickEvents = context.mode === 'vertical' ? {
     onClick: handleClick
@@ -46,8 +45,6 @@ const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className}) =
     })
     const childrenComponent = React.Children.map(children, (child, i) => {
       const childElement = child as FunctionComponentElement<MenuItemProps>
-      console.log(childElement, 'childElement');
-      
       if (childElement.type.displayName === 'MenuItem') {
         return React.cloneElement(childElement, {
           index: `${index}-${i}`
@@ -57,18 +54,22 @@ const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className}) =
       }
     })
     return (
-      <div>
+      <Transition
+        in={menuOpen}
+        timeout={300}
+        animation="zoom-in-top"
+      >
         <ul className={subMenuClasses}>
           {childrenComponent}
         </ul>
-      </div>
+      </Transition>
     )
   }
   return (
     <li key={index} className={classes} {...hoverEvents}>
       <div className="submenu-title" {...clickEvents}>
         {title}
-        {/* <Icon icon="angle-down" className="arrow-icon"/> */}
+        <Icon icon="angle-down" className="arrow-icon"/>
       </div>
       {renderChildren()}
     </li>
