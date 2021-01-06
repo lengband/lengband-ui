@@ -44,7 +44,6 @@ export const Tab: FC<TabProps> = props => {
     return React.Children.map(children, (child, index) => {
       const childElement = child as React.FunctionComponentElement<TabItemProps>
       const { displayName } = childElement.type
-      console.log({ childElement, displayName });
       if (displayName === 'TabItem') {
         return React.cloneElement(childElement, {
           index: index.toString()

@@ -10,6 +10,8 @@ import TabItem from './components/Tab/tabItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+console.log({ fas });
+
 library.add(fas)
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
         size="sm"
         type="danger"
         description="sadfsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafeewfewfhnuiowefhjeowihfoiuwjrehfoiwehrfoiuwehtfuioewhfiohwjefoi iiihrfoiwehjfiowej fopi pje wj foj"
-        closeale/>
+        closeable/>
       <hr/>
       <Menu>
         <MenuItem>菜单1</MenuItem>

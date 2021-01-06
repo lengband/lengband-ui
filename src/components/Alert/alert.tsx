@@ -4,9 +4,9 @@ import classNames from 'classnames'
 export type Size = 'lg' | 'sm'
 export type Type = 'primary' | 'danger'
 
-interface BaseAlertProps {
+export interface BaseAlertProps {
   title: string;
-  closeale?: boolean;
+  closeable?: boolean;
   size?: Size;
   type?: Type;
   description?: string;
@@ -21,7 +21,7 @@ export const Alert: FC<BaseAlertProps> = props => {
     size,
     title,
     description,
-    closeale,
+    closeable,
     ...restProps
   } = props
   // btn, btn-lg, btn-primary
@@ -37,7 +37,7 @@ export const Alert: FC<BaseAlertProps> = props => {
       >
         <div className="alert_title">{ title }</div>
         <div className="alert_description">{ description }</div>
-        { closeale ? <i className="alert_close" onClick={ () => setShow(false) }>x</i> : null }
+        { closeable ? <i className="alert_close" onClick={ () => setShow(false) }>x</i> : null }
       </div>
     )
   }
@@ -46,7 +46,7 @@ export const Alert: FC<BaseAlertProps> = props => {
 }
 
 Alert.defaultProps = {
-  closeale: false,
+  closeable: false,
   type: 'primary'
 }
 
