@@ -13,6 +13,7 @@ interface BaseButtonProps {
   /**设置 Button 的类型 */
   btnType?: ButtonType;
   children: React.ReactNode;
+  /**设置 a链接 跳转的地址 */
   href?: string;
 }
 

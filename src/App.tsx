@@ -6,8 +6,7 @@ import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
 import Tab from './components/Tab/tab'
 import TabItem from './components/Tab/tabItem'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Icon } from './components/Icon/icon'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 console.log({ fas });
@@ -52,7 +51,7 @@ function App() {
 
       <hr/>
 
-      <FontAwesomeIcon icon='arrow-down' />
+      <Icon icon='arrow-down' theme='danger' />
     </div>
   );
 }

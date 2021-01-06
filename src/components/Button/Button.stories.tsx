@@ -10,23 +10,32 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args}>按钮</Button>;
-
-export const Primary = Template.bind({});
-Primary.args = {
+export const btn = Template.bind({});
+btn.args = {
   btnType: 'primary',
 };
+btn.storyName = '按钮'
 
-export const Danger = Template.bind({});
-Danger.args = {
-  btnType: 'danger'
-};
+export const allSizeBtn = () => {
+  return (
+    <>
+      <Button className="mr-3">按钮</Button>
+      <Button className="mr-3" btnType="primary">按钮</Button>
+      <Button className="mr-3" btnType="danger">按钮</Button>
+      <Button className="mr-3" btnType="link" href="/?path=/docs/example-button--all-size-btn">按钮</Button>
+    </>
+  )
+}
+allSizeBtn.storyName = '不同类型的按钮'
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'lg',
-};
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'sm',
-};
+export const allTypeBtn = () => {
+  return (
+    <>
+      <Button className="mr-3" size="sm">按钮</Button>
+      <Button className="mr-3">按钮</Button>
+      <Button className="mr-3" size="lg">按钮</Button>
+    </>
+  )
+}
+allTypeBtn.storyName = '不同尺寸的按钮'

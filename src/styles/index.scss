@@ -21,7 +21,7 @@
 @import "../components/Tab/style";
 
 // // icon
-// @import "../components/Icon/style";
+@import "../components/Icon/style";
 
 // //input
 // @import "../components/Input/style";
@@ -34,3 +34,5 @@
 
 // //progress
 // @import "../components/Progress/style";
+
+@import './bootstrap.min.css'

@@ -40,7 +40,7 @@ loadCssCode(`
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    transition: all .3s ease-in-out,background-color .3s ease-in-out;
+    transition: all .2s ease-in-out,background-color .2s ease-in-out;
   }
   .story-icon-item:hover {
     background-color: #0d6efd;
