@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React, { CSSProperties, StyleHTMLAttributes } from 'react';
+import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { Icon, IconProps } from './icon'
 import { library } from '@fortawesome/fontawesome-svg-core'

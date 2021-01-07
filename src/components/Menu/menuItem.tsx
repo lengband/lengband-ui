@@ -7,8 +7,14 @@ export interface MenuItemProps {
   className?: string;
   style?: React.CSSProperties;
 }
-
-const MenuItem: React.FC<MenuItemProps> = (props) => {
+/**
+ * 为网站提供导航功能的菜单。支持横向纵向两种模式，支持下拉菜单。
+ * 
+ * ~~~js
+ * import { MenuItem } from 'vikingship'
+ * ~~~
+ */
+export const MenuItem: React.FC<MenuItemProps> = (props) => {
   const { index, disabled, className, style, children } = props
   const context = useContext(MenuContext)
   const classes = classNames('menu-item', className, {

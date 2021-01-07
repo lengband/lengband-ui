@@ -1,6 +1,7 @@
 import React, { FC, useState, createContext, CSSProperties } from 'react'
 import classNames from 'classnames'
 import { MenuItemProps } from './menuItem'
+import { SubMenuProps } from './subMenu'
 
 type MenuMode = 'horizontal' | 'vertical'
 export interface MenuProps {
@@ -25,6 +26,7 @@ interface IMenuContext {
 export const MenuContext = createContext<IMenuContext>({index: '0'})
 /**
  * 为网站提供导航功能的菜单。支持横向纵向两种模式，支持下拉菜单。
+ * 
  * ~~~js
  * import { Menu } from 'vikingship'
  * ~~~
@@ -50,7 +52,7 @@ export const Menu: FC<MenuProps> = (props) => {
   }
   const renderChildren = () => {
     return React.Children.map(children, (child, index) => {
-      const childElement = child as React.FunctionComponentElement<MenuItemProps>
+      const childElement = child as React.FunctionComponentElement<MenuItemProps | SubMenuProps>
       const { displayName } = childElement.type
       if (displayName === 'MenuItem' || displayName === 'SubMenu') {
         return React.cloneElement(childElement, {

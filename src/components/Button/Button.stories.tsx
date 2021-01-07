@@ -14,7 +14,7 @@ export const btn = Template.bind({});
 btn.args = {
   btnType: 'primary',
 };
-btn.storyName = '按钮'
+btn.storyName = '默认'
 
 export const allSizeBtn = () => {
   return (
