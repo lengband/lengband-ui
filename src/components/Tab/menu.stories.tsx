@@ -18,4 +18,4 @@ const Template: Story<TabProps> = (args) => (
   </Tab>
 )
 export const example = Template.bind({});
-example.storyName = '代码演示'
+example.storyName = '标签页'

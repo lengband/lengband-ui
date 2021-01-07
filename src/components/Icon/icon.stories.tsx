@@ -21,7 +21,7 @@ export const addressBook = Template.bind({});
 addressBook.args = {
   icon: 'address-book',
 };
-addressBook.storyName = '默认'
+addressBook.storyName = '图标'
 
 
 loadCssCode(`

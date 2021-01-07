@@ -13,17 +13,18 @@ export const Title = Template.bind({});
 Title.args = {
   title: 'title1',
 };
+Title.storyName = '警告'
 
-export const WithDescription = Template.bind({});
-WithDescription.args = {
-  title: 'title2',
-  description: 'Additional description and informations about copywriting.'
-};
+// export const WithDescription = Template.bind({});
+// WithDescription.args = {
+//   title: 'title2',
+//   description: 'Additional description and informations about copywriting.'
+// };
 
-export const WithCloseable = Template.bind({});
-WithCloseable.args = {
-  title: 'title3',
-  description: 'Additional description and informations about copywriting.',
-  closeable: true,
-};
+// export const WithCloseable = Template.bind({});
+// WithCloseable.args = {
+//   title: 'title3',
+//   description: 'Additional description and informations about copywriting.',
+//   closeable: true,
+// };
 

@@ -12,7 +12,7 @@ export default {
 } as Meta;
 
 const Template: Story<MenuProps> = (args) => (
-  <Menu {...args}>
+  <Menu {...args} style={{ marginBottom: '200px'}}>
     <MenuItem><Icon icon="briefcase" /> 菜单1</MenuItem>
     <MenuItem><Icon icon="dumpster" /> 菜单2</MenuItem>
     <MenuItem><Icon icon="feather" /> 菜单3</MenuItem>
@@ -24,4 +24,4 @@ const Template: Story<MenuProps> = (args) => (
   </Menu>
 )
 export const example = Template.bind({});
-example.storyName = '代码演示'
+example.storyName = '菜单'
