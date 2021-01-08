@@ -9,9 +9,10 @@ interface DataSourceObject {
   value: string;
 }
 export type DataSourceType<T = {}> = T & DataSourceObject
-export interface AutoCompleteProps extends Omit<InputProps, 'onSelect'> {
+export interface AutoCompleteProps extends Omit<Omit<InputProps, 'onSelect'>, 'onChange'> {
   fetchSuggestions: (str: string) => DataSourceType[] | Promise<DataSourceType[]>;
   onSelect?: (item: DataSourceType) => void;
+  onChange?: (item: string) => void;
   renderOption?: (item: DataSourceType) => ReactElement;
 }
 
@@ -21,6 +22,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
     onSelect,
     value,
     renderOption,
+    onChange,
     ...restProps
   } = props
 
@@ -89,6 +91,9 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
     const value = e.target.value.trim()
     setInputValue(value)
     triggerSearch.current = true
+    if (onChange) {
+      onChange(value)
+    }
   }
   const handleSelect = (item: DataSourceType) => {
     setInputValue(item.value)
