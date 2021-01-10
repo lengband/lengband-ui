@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# lengband-ui
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+lengband-ui is a [React.js](https://reactjs.org/) UI library with a simple API.
 
-## Available Scripts
+<sub>_lengband-ui is **not** a CSS framework. Instead, the focus is on interactive components that require Javascript. You should be able to use lengband-ui with any page layout, structure, or CSS framework._</sub>
 
-In the project directory, you can run:
+## Documentation and demo
 
-### `yarn start`
+[https://lengband.github.io/lengband-ui/](https://lengband.github.io/lengband-ui/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Requirements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [react](https://reactjs.org/) (^v16.8.0)
+* [react-dom](https://reactjs.org/docs/react-dom.html#gatsby-focus-wrapper) (^v16.8.0)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Browser support
 
-### `yarn build`
+IE 10+ (due to [Flexbox support](http://caniuse.com/#search=flexbox)).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install lengband-ui --save
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `yarn eject`
+### ES6
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```js
+import React from 'react';
+import { Button, Icon } from 'lengband-ui';
+import 'lengband-ui/dist/index.css';
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function App() {
+  return (
+    <div className="App">
+      <Button>learn react</Button>
+      <Icon icon='arrow-down' theme='danger' />
+    </div>
+  );
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default App;
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Licence
+lengband-ui is open source and released under the [MIT Licence](LICENCE).
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

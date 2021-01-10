@@ -22,8 +22,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
  * Input 输入框 通过鼠标或键盘输入内容，是最基础的表单域的包装。
  * 
  * ~~~js
- * // 这样引用
- * import { Input } from 'lengband'
+ * import { Input } from 'lengband-ui'
  * ~~~
  * 支持 HTMLInput 的所有基本属性
  */

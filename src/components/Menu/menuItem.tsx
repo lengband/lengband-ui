@@ -11,7 +11,7 @@ export interface MenuItemProps {
  * 为网站提供导航功能的菜单。支持横向纵向两种模式，支持下拉菜单。
  * 
  * ~~~js
- * import { MenuItem } from 'lengband'
+ * import { MenuItem } from 'lengband-ui'
  * ~~~
  */
 export const MenuItem: React.FC<MenuItemProps> = (props) => {
